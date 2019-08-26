@@ -3,6 +3,7 @@ id: 587d78a4367417b2b2512ad5
 title: Adjust the Tone of a Color
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cEDJvT7'
+forumTopicId: 301038
 ---
 
 ## Description
@@ -21,7 +22,7 @@ All elements have a default <code>background-color</code> of <code>transparent</
 ```yml
 tests:
   - text: The <code>nav</code> element should have a <code>background-color</code> of the adjusted cyan tone using the <code>hsl()</code> property.
-    testString: assert(code.match(/nav\s*?{\s*?background-color:\s*?hsl\(180,\s*?80%,\s*?25%\)/gi), 'The <code>nav</code> element should have a <code>background-color</code> of the adjusted cyan tone using the <code>hsl()</code> property.');
+    testString: assert(code.match(/nav\s*?{\s*?background-color:\s*?hsl\(180,\s*?80%,\s*?25%\)/gi));
 
 ```
 
@@ -86,8 +87,47 @@ tests:
 <section id='solution'>
 
 
-```js
-var code = "nav {background-color: hsl(180, 80%, 25%);}"
+```html
+<style>
+  header {
+    background-color: hsl(180, 90%, 35%);
+    color: #FFFFFF;
+  }
+
+  nav {
+    background-color: hsl(180, 80%, 25%);
+  }
+
+  h1 {
+    text-indent: 10px;
+    padding-top: 10px;
+  }
+
+  nav ul {
+    margin: 0px;
+    padding: 5px 0px 5px 30px;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+<header>
+  <h1>Cooking with FCC!</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Classes</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 ```
 
 </section>
